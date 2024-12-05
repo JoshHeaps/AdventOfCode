@@ -61,11 +61,100 @@ namespace AdventOfCode2024 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 76309   75213
+        ///79731   28444
+        ///29583   71339
+        ///60992   99148
+        ///34680   74530
+        ///45691   82519
+        ///55358   22047
+        ///95523   45384
+        ///37661   82208
+        ///33464   91461
+        ///26897   96393
+        ///76556   76554
+        ///82316   98880
+        ///92079   23082
+        ///55539   10033
+        ///65931   66060
+        ///98880   60464
+        ///19348   41458
+        ///72003   84074
+        ///78401   78856
+        ///53187   72003
+        ///65201   71211
+        ///45971   12776
+        ///45911   26854
+        ///37527   13462
+        ///28891   28444
+        ///82801   81076
+        ///29496   21971
+        ///81662   12472
+        ///89956   51107
+        ///92833   22498
+        ///23135   19348
+        ///33661   51107
+        ///48499   81114
+        ///53 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day1 {
+            get {
+                return ResourceManager.GetString("Day1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11 12 15 18 19 18
+        ///84 86 88 89 92 92
+        ///18 19 21 23 24 25 29
+        ///56 59 60 61 63 66 73
+        ///11 13 15 13 15
+        ///36 38 36 39 42 43 40
+        ///21 22 23 21 21
+        ///35 37 38 39 37 41
+        ///56 58 55 57 58 60 61 68
+        ///77 78 80 80 83 85 88 89
+        ///79 81 82 82 83 80
+        ///89 90 91 91 91
+        ///69 71 73 73 76 78 82
+        ///2 4 5 8 8 13
+        ///60 63 67 70 72 73 74 75
+        ///15 16 18 22 19
+        ///18 21 25 28 31 31
+        ///58 61 65 66 67 71
+        ///50 53 56 58 61 63 67 74
+        ///51 54 56 58 59 62 67 70
+        ///78 81 82 84 90 89
+        ///62 64 65 71 73 73
+        ///68 71 76 79 81 85
+        ///23 25 30 32 34 36 37 44
+        ///68 66 67 69 72 73 76
+        ///52  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day2 {
+            get {
+                return ResourceManager.GetString("Day2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &apos; mul(382,128)select(){*who(710,947)mul(117,325)?$#from()/select()mul(829,251)}@mul(17,183)(:*when()}?+,what()mul(911,142)[:&gt;)who(824,820)/mul(199,484) when()mul(325,240))select()$~?&apos;from(387,163)&gt;what()@mul(920,723)where()}(#what()&lt;who() !mul(274,899)what()mul(664,836)}~who();how()who(537,994)/(?]mul(257,635)^when()don&apos;t()!what()}where()#:when()&gt;&apos;where()mul(360,222),when()@&amp;&lt;^mul(268,245){{)%:from()&lt;#mul(936,776)$select()!mul(474,825)how()}~mul(484,39)!?:@[*&lt;mul(357,805)how()mul(261,810) {$&gt;mul(306,422)$wh [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Day3 {
             get {
                 return ResourceManager.GetString("Day3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMMMXMASMSSSMSMMSAMXSSMMSXMMAMXMXXXSMMSXXAMAASMSSMSSSMSASMMMXSXSMMSSSMSMXSXMAMAAXAXMMAMXMMMMSXSASMXMASAAMAMXMXAMAXMAXAXSAMSMXMMMAMAASASXMAMX
+        ///SAMSAMXSAAAAXMASXXMAXAAAXMSMMMSSMMMXAAMMSMASMMMAMAAAAASASAXSAMXSXMAAMAAMAMASAMXSMMMSMAMASAMXAAAAMXAMXMAMSAMAMMAMXMXMASMAXMXAAMASAMMSMASAMSSM
+        ///SAMMMMAMMMSMMMSMMMMMSSMMXXSAAMAAAMMXMMSAMMAMAAMASMXSMMMAMAXMASAXAMMSMXAMMMAMAMAAAAAMAASMSXSMMSMSMSSMMXAMSASXSAAMXSSXMXAMXSMSMSASAXSAMXMAMAAX
+        ///MXMAXMXSAXAMXMMAMAAMXMASMASMMMSSMMSASAMASMASXMMAXAMXMXMAMXMAAMMSSMAXMMSASMSMAMXSSMSSSM [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day4 {
+            get {
+                return ResourceManager.GetString("Day4", resourceCulture);
             }
         }
     }
