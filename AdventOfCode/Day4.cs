@@ -42,22 +42,6 @@ public static class Day4
         return result;
     }
 
-    private static char[,] To2DCharArray(this string input)
-    {
-        var lines = input.SplitToLines().ToList();
-        char[,] result = new char[lines[0].Length, lines.Count];
-
-        for (int i = 0;  i < lines.Count; i++)
-        {
-            for (int j = 0; j < lines[i].Length; j++)
-            {
-                result[j, i] = lines[i][j];
-            }
-        }
-
-        return result;
-    }
-
     #region XMAS
 
     private static readonly char[] XMAS = { 'X', 'M', 'A', 'S' };
