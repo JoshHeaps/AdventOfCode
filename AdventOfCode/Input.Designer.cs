@@ -251,5 +251,11 @@ namespace AdventOfCode2024 {
                 return ResourceManager.GetString("Day6", resourceCulture);
             }
         }
+
+        internal static string Day7 {
+            get {
+                return ResourceManager.GetString("Day7", resourceCulture);
+            }
+        }
     }
 }
