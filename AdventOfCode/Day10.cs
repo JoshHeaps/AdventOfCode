@@ -39,22 +39,6 @@ public static class Day10
         return result;
     }
 
-    private static List<Point> GetTrailScores(this int[,] map)
-    {
-        List<Point> result = [];
-
-        for (int i = 0; i < map.GetLength(0); i++)
-        {
-            for (int j = 0; j < map.GetLength(1); j++)
-            {
-                if (map[j, i] == 9)
-                    result.Add(new Point(j, i));
-            }
-        }
-
-        return result;
-    }
-
     private static Dictionary<Point, int> SearchForUniquePaths(this int[,] map)
     {
         var trailHeads = map.GetTrailHeads();
