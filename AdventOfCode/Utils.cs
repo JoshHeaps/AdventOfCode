@@ -33,4 +33,22 @@ public static class Utils
 
         return result;
     }
+
+    public static int[,] To2DIntArray(this string input) =>
+        input.SplitToLines().Select(x => x.Select(y => int.Parse(y.ToString())).ToArray()).ToArray().To2DArray();
+
+    public static T[,] To2DArray<T>(this T[][] array)
+    {
+        T[,] result = new T[array.Length,array.Length];
+
+        for (int i = 0;i < array.Length; i++)
+        {
+            for (int j = 0; j < array[i].Length; j++)
+            {
+                result[j,i] = array[i][j];
+            }
+        }
+
+        return result;
+    }
 }
