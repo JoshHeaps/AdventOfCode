@@ -1,3 +1,3 @@
 ﻿using AdventOfCode2024;
 
-Console.WriteLine(Input.Day8.GetRequiredAntinodeCount());
+Console.WriteLine(Input.Day9.GetFileSystemCheckSum());
