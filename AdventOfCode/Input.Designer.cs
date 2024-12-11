@@ -124,6 +124,15 @@ namespace AdventOfCode2024 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5 127 680267 39260 0 26 3553 5851995.
+        /// </summary>
+        internal static string Day11 {
+            get {
+                return ResourceManager.GetString("Day11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 11 12 15 18 19 18
         ///84 86 88 89 92 92
         ///18 19 21 23 24 25 29
