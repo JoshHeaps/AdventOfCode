@@ -77,7 +77,7 @@ public static class Day9
                 if (i >= fileIndex)
                     break;
 
-                while (i < fileIndex && format[i] == -1)
+                while (i <= fileIndex && format[i] == -1)
                 {
                     i++;
                     openSlot++;
