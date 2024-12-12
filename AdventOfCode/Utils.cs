@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode2024;
+﻿using System.Runtime.InteropServices;
+
+namespace AdventOfCode2024;
 
 public static class Utils
 {
@@ -51,4 +53,18 @@ public static class Utils
 
         return result;
     }
+
+    public static void SetUpColorPicking()
+    {
+        var handle = GetStdHandle(-11);
+        GetConsoleMode(handle, out int mode);
+        SetConsoleMode(handle, mode | 0x4);
+    }
+
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern bool SetConsoleMode(IntPtr hConsoleHandle, int mode);
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern bool GetConsoleMode(IntPtr handle, out int mode);
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern IntPtr GetStdHandle(int handle);
 }

@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace AdventOfCode2024;
 
@@ -7,6 +8,8 @@ public static class Day12
     public static int GetFencingPrice(this string input, bool bulkDiscount = false)
     {
         var plainMap = input.To2DCharArray();
+        Console.BufferHeight = plainMap.GetLength(0) * 5;
+        Utils.SetUpColorPicking();
 
         Dictionary<GardenPlot, bool> map = [];
 
@@ -16,7 +19,9 @@ public static class Day12
             {
                 GardenPlot plot = new(new(j, i), plainMap[j, i]);
                 map.Add(plot, false);
+                Console.Write(plainMap[j, i]);
             }
+            Console.WriteLine();
         }
 
         List<GardenRegion> regions = [];
@@ -26,13 +31,12 @@ public static class Day12
             if (visited)
                 continue;
 
-            regions.Add(new GardenRegion(ref map, plot));
+            regions.Add(new GardenRegion(ref map, plot, $"\x1b[48;2;{new Random().Next(256)};{new Random().Next(256)};{new Random().Next(256)}m"));
         }
 
-        foreach(var region in regions)
-        {
-            Console.WriteLine($"Type: {region.GardenPlots[0].PlotType}, Area: {region.Area}, Perimeter: {region.Perimeter}, Sides: {region.Sides}");
-        }
+        Console.ResetColor();
+        Console.SetCursorPosition(0, plainMap.GetLength(0));
+        Console.Write($"\x1b[48;2;{0};{0};{0}m");
 
         return regions.Sum(x => x.Area * (bulkDiscount ? x.Sides : x.Perimeter));
     }
@@ -44,9 +48,11 @@ public class GardenRegion
     public int Area => GardenPlots.Count;
     public int Perimeter => CalculatePerimeter();
     public int Sides => CalculateSides();
+    private string _color;
 
-    public GardenRegion(ref Dictionary<GardenPlot, bool> map, GardenPlot startingPlot)
+    public GardenRegion(ref Dictionary<GardenPlot, bool> map, GardenPlot startingPlot, string color)
     {
+        _color = color;
         GardenPlots = [startingPlot];
         map[startingPlot] = true;
         SetUpPlots(ref map, startingPlot);
@@ -54,6 +60,9 @@ public class GardenRegion
 
     private void SetUpPlots(ref Dictionary<GardenPlot, bool> map, GardenPlot currentPlot)
     {
+        Thread.Sleep(100);
+        Console.SetCursorPosition(currentPlot.PlotPoint.X, currentPlot.PlotPoint.Y);
+        Console.Write(_color + " ");
         List<GardenPlot> nextSteps = GetPossiblePlots(ref map, currentPlot);
 
         if (nextSteps.Count == 0)
