@@ -151,6 +151,44 @@ namespace AdventOfCode2024 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Button A: X+12, Y+57
+        ///Button B: X+56, Y+15
+        ///Prize: X=14212, Y=3815
+        ///
+        ///Button A: X+17, Y+46
+        ///Button B: X+98, Y+19
+        ///Prize: X=3507, Y=4566
+        ///
+        ///Button A: X+60, Y+12
+        ///Button B: X+23, Y+41
+        ///Prize: X=3236, Y=2540
+        ///
+        ///Button A: X+13, Y+99
+        ///Button B: X+84, Y+41
+        ///Prize: X=3193, Y=10546
+        ///
+        ///Button A: X+30, Y+82
+        ///Button B: X+35, Y+18
+        ///Prize: X=2250, Y=3354
+        ///
+        ///Button A: X+24, Y+50
+        ///Button B: X+60, Y+18
+        ///Prize: X=8624, Y=9514
+        ///
+        ///Button A: X+26, Y+17
+        ///Button B: X+17, Y+83
+        ///Prize: X=1284, Y=4290
+        ///
+        ///Button A: X+18, Y+49
+        ///Butto [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day13 {
+            get {
+                return ResourceManager.GetString("Day13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 11 12 15 18 19 18
         ///84 86 88 89 92 92
         ///18 19 21 23 24 25 29
